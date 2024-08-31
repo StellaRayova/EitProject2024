@@ -1,0 +1,87 @@
+*{
+border-radius: 0px;
+}
+
+.otp{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-right: 55px;
+    margin-left: 20px;
+    gap: 30px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 1px;
+    padding-bottom: 45px;
+    padding-right: 35px;
+    
+}
+
+    .keybtn{
+        background-color: white;
+        border: 1px solid #ddd;
+            padding: 15px 0;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 50px;
+            line-height: 0.4;
+           
+           
+        }
+
+
+        .card {
+            border: 1px solid #f7f3f3;
+            border-radius: 2px;
+            padding: 0px;
+            margin: 10px;
+            width: 310px;
+            text-align: left;
+            background-color: white;
+            height: 630px;
+            padding-bottom: 10px;
+            margin-top: 25px;
+            margin-left: 20px;
+
+        }
+
+        .otptext{
+            width: 40px; 
+            height: 40px; 
+            border-radius: 5px; 
+            border-color: green;
+            border: 2px solid green;
+            padding: 14px;
+        }
+
+        .contbtn{
+            width: 250px; 
+            height: 40px; 
+            background-color: black;
+            color: white;
+            position: relative;
+            margin-bottom: 30px;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+
+        .font{
+            font-size: 9px;
+            line-height: 0.2;
+        }
+
+        .f{
+            font-weight: bold;
+        }
+
+        .h{
+            height: 650px;
+        }
