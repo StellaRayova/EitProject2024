@@ -1,0 +1,72 @@
+import React from 'react';
+import WhatsAppButton from './WhatsAppButton';
+
+const App = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <WhatsAppButton />
+    </div>
+  );
+};
+
+export default App;
+============================
+import React from 'react';
+import './WhatsAppButtton.css';
+import whatsappLogo from './WhatsAppButton.png'; // Path to your WhatsApp logo image
+
+const WhatsAppButton = () => {
+  const phoneNumber = '918374138892'; // Your specified phone number with country code
+  const message = 'Hello, I have an inquiry.';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  return (
+    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="whatsapp-button">
+      <img src={whatsappLogo} alt="Chat with us on WhatsApp" className="whatsapp-logo" />
+      <span className="whatsapp-text">Chat with us on WhatsApp</span>
+    </a>
+  );
+};
+
+export default WhatsAppButton;
+======================================
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #25D366; /* Default background color for button */
+    color: white; /* Default text color */
+    padding: 10px; /* Space around the content */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s; /* Transitions for hover effects */
+    font-size: 16px; /* Adjust text size as needed */
+  }
+  
+  .whatsapp-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%;
+    margin-right: 10px; /* Space between logo and text */
+    transition: opacity 0.3s;
+  }
+  
+  .whatsapp-logo:hover {
+    opacity: 0.8; /* Optional: add a hover effect */
+  }
+  
+  .whatsapp-text {
+    font-weight: bold; /* Make the text bold */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: color 0.3s; /* Transition for text color */
+  }
+  
+  .whatsapp-button:hover .whatsapp-text {
+    color: #00e676; /* Change text color on hover */
+  }
+  
+  .whatsapp-button:hover {
+    opacity: 0.9; /* Optional: add a hover effect for the whole button */
+    background-color: #00796b; /* Change background color on hover */
+  }
+  
